@@ -47,4 +47,16 @@ public class HelloController {
         System.out.println(person);
         return "bye lujieni";
     }
+
+    /**
+     * 导出数据
+     * post提交的数据不一定都要用@RequestBody接受,除非它是以json格式提交的!!!
+     * @param name
+     * @param age
+     */
+    @PostMapping("/export")
+    public void bye(String name,Integer age){
+        System.out.println(name);
+        System.out.println(age);
+    }
 }
